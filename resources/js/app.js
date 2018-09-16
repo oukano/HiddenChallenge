@@ -9,6 +9,30 @@ require('./bootstrap');
 
 window.Vue = require('vue');
 
+import Vue from 'vue'
+import VueRouter from 'vue-router'
+
+Vue.use(VueRouter)
+
+import nearby   from './components/nearby.vue'
+import prefered from './components/prefered.vue'
+
+const router = new VueRouter({
+    mode: 'history',
+    routes: [
+        {
+            path: '/',
+            name: 'nearby',
+            component: nearby
+        },
+        {
+            path: '/preferedStores',
+            name: 'prefered',
+            component: prefered,
+        },
+    ],
+});
+
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -16,7 +40,10 @@ window.Vue = require('vue');
  */
 
 Vue.component('maincomponent', require('./components/MainComponent.vue'));
+Vue.component('nearbythumbnail', require('./components/NearbyThumbnail.vue'));
+Vue.component('preferedthumbnail', require('./components/PreferedThumbnail.vue'));
 
 const app = new Vue({
-    el: '#app'
+    el: '#app',
+    router
 });

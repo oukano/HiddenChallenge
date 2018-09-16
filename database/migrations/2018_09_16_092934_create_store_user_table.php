@@ -14,9 +14,11 @@ class CreateStoreUserTable extends Migration
     public function up()
     {
         Schema::create('store_user', function (Blueprint $table) {
-            $table->increments('id');
-            $table->integer('post_id')->unsigned();
+            $table->primary(['store_id','user_id']);
+
+            $table->integer('store_id')->unsigned();
             $table->integer('user_id')->unsigned();
+            
             $table->timestamps();
         });
     }

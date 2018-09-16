@@ -11,6 +11,12 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Auth::routes();
+
+
+Route::get('/', 'HomeController@index')->name('home');
+Route::post('addLike','likeController@addLike');
+Route::resource('nearby', 'NearbyController');
+Route::resource('prefered', 'PreferedController');
+Route::get('/$anything',  'HomeController@index');
+

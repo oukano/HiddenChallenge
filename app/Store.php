@@ -15,4 +15,9 @@ class Store extends Model
     protected $fillable = [
         'name', 'image_link', 'lan','lat'
     ];
+
+    public function likes()
+    {
+        return $this->belongsToMany(User::class,'store_user');
+    }
 }

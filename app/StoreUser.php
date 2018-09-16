@@ -7,8 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 class StoreUser extends Model
 {
     //
-
-    protected $fillable =[
-        'post_id' , 'user_id'
-    ]
+    protected $table = 'store_user';
+    
 }
