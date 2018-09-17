@@ -1,6 +1,7 @@
 # The Hidden Challenge
 
 * web-coding-challenge 
+* forgive my css it's not good i know it , but i did my best to handle the fonctional spec mentioned by you , and i did it as quick as i can to deliver the challenge in reduce the Time to market or at least to deliver an acceptable MVP
 
 
 ## installation
