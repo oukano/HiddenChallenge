@@ -50659,6 +50659,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
 
 
 
@@ -50681,32 +50686,33 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "section",
-    [
-      _c(
-        "div",
-        { staticClass: "row d-flex content-justify-reverse" },
-        [
-          _c("router-link", { attrs: { to: { name: "nearby" } } }, [
-            _c("button", { staticClass: "btn btn-default" }, [
-              _vm._v("nearby Shops")
-            ])
-          ]),
-          _vm._v(" "),
-          _c("router-link", { attrs: { to: { name: "prefered" } } }, [
-            _c("button", { staticClass: "btn btn-default" }, [
-              _vm._v("Prefered Shops")
-            ])
+  return _c("section", [
+    _c(
+      "div",
+      { staticClass: "row d-flex justify-content-center" },
+      [
+        _c("router-link", { attrs: { to: { name: "nearby" } } }, [
+          _c("button", { staticClass: "btn btn-primary p-2" }, [
+            _vm._v("nearby Shops")
           ])
-        ],
-        1
-      ),
-      _vm._v(" "),
-      _c("router-view")
-    ],
-    1
-  )
+        ]),
+        _vm._v(" "),
+        _c("router-link", { attrs: { to: { name: "prefered" } } }, [
+          _c("button", { staticClass: "btn btn-success p-2" }, [
+            _vm._v("Prefered Shops")
+          ])
+        ])
+      ],
+      1
+    ),
+    _vm._v(" "),
+    _c(
+      "div",
+      { staticClass: "d-flex justify-content-center" },
+      [_c("router-view")],
+      1
+    )
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -50896,7 +50902,7 @@ var render = function() {
             expression: "!liked"
           }
         ],
-        staticClass: "card",
+        staticClass: "card p-2",
         staticStyle: { width: "18rem" }
       },
       [
@@ -50916,7 +50922,7 @@ var render = function() {
             _c(
               "button",
               {
-                staticClass: "btn btn-default",
+                staticClass: "btn btn-primary p-2",
                 attrs: { type: "button", "aria-label": "Left Align" },
                 on: {
                   click: function($event) {
@@ -50930,7 +50936,7 @@ var render = function() {
             _c(
               "button",
               {
-                staticClass: "btn btn-default",
+                staticClass: "btn btn-default p-2",
                 attrs: { type: "button", "aria-label": "Left Align" }
               },
               [_vm._v("\n                DisLike\n            ")]
@@ -51108,7 +51114,7 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _c("div", { staticClass: "card", staticStyle: { width: "18rem" } }, [
+    _c("div", { staticClass: "card p-2", staticStyle: { width: "18rem" } }, [
       _c("img", {
         staticClass: "card-img-top",
         attrs: { src: _vm.store.image_link, alt: "Card image cap" }
@@ -51123,7 +51129,7 @@ var render = function() {
           _c(
             "button",
             {
-              staticClass: "btn btn-default",
+              staticClass: "btn btn-danger p-2",
               attrs: { type: "button", "aria-label": "Left Align" },
               on: {
                 click: function($event) {

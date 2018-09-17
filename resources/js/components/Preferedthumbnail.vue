@@ -1,12 +1,12 @@
 <template>
     
     <div>
-        <div class="card" style="width: 18rem;" >
+        <div class="card p-2" style="width: 18rem;" >
         <img class="card-img-top" :src="store.image_link" alt="Card image cap">
         <div class="card-body">
             <h5 class="card-title">{{store.name}}</h5>
             <div class="row">
-                <button type="button" class="btn btn-default" aria-label="Left Align" v-on:click="deleteHandler(store.id)">
+                <button type="button" class="btn btn-danger p-2" aria-label="Left Align" v-on:click="deleteHandler(store.id)">
                     delete
                 </button>
 

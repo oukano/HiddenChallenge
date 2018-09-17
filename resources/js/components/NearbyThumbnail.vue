@@ -1,17 +1,17 @@
 <template>
     
     <div>
-        <div class="card" style="width: 18rem;" v-show="!liked">
+        <div class="card p-2" style="width: 18rem;" v-show="!liked">
         <img class="card-img-top" :src="store.image_link" alt="Card image cap">
         <div class="card-body">
             <h5 class="card-title">{{store.name}}</h5>
             <p>{{store.distance}} m.</p>
             <div class="row">
-                <button type="button" class="btn btn-default" aria-label="Left Align" v-on:click="likeHandler(store.id)">
+                <button type="button" class="btn btn-primary p-2" aria-label="Left Align" v-on:click="likeHandler(store.id)">
                     Like
                 </button>
 
-                <button type="button" class="btn btn-default" aria-label="Left Align">
+                <button type="button" class="btn btn-default p-2" aria-label="Left Align">
                     DisLike
                 </button>
 

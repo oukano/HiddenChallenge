@@ -1,18 +1,23 @@
 <template>
     
     <section>
-        <div class="row d-flex content-justify-reverse" >
-            <router-link :to="{ name: 'nearby' }">
-                <button class="btn btn-default">nearby Shops</button>
+        <div class="row d-flex justify-content-center" >
+            
+                <router-link :to="{ name: 'nearby' }">
+                <button class="btn btn-primary p-2">nearby Shops</button>
             </router-link>
 
             <router-link :to="{ name: 'prefered' }">
-                <button class="btn btn-default">Prefered Shops</button>
+                <button class="btn btn-success p-2">Prefered Shops</button>
             </router-link>
+
+            
         </div>
 
-
-        <router-view></router-view>
+        <div class="d-flex justify-content-center" >
+            <router-view></router-view>
+            
+        </div>
 
     </section>
     
