@@ -24,7 +24,7 @@ class NearbyController extends Controller
     public function index()
     {
         
-        return response()->json(Store::doesntHave('likes')->get());
+        return response()->json(Store::doesntHave('likes')->orderBy('distance')->get());
 
     }
 

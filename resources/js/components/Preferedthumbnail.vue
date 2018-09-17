@@ -6,7 +6,7 @@
         <div class="card-body">
             <h5 class="card-title">{{store.name}}</h5>
             <div class="row">
-                <button type="button" class="btn btn-default" aria-label="Left Align" v-on:click="likeHandler(store.id)">
+                <button type="button" class="btn btn-default" aria-label="Left Align" v-on:click="deleteHandler(store.id)">
                     delete
                 </button>
 
@@ -24,23 +24,25 @@
 import axios from 'axios';
 export default {
 
-    props:['store'],
+    props:['store','refresh'],
 
     methods: {
 
-        // likeHandler: (storeID)=>{
+        deleteHandler: (storeID)=>{
 
-        //     axios.post("/addLike",{
-        //         storeID
-        //     })
-        //     .then((res)=>{
-        //         console.log( res)
-        //     }).catch((err)=>{
-        //         console.log("Licked")
-        //     })
+            axios.post("/deletePrefered",{
+                storeID
+            })
+            .then((res)=>{
+                console.log( res)
+            }).catch((err)=>{
+                console.log(err)
+            })
+
+            this.refresh
 
 
-        // }
+        }
 
     }
     

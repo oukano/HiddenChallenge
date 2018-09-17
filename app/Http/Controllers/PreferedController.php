@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User ;
+use App\StoreUser;
 use Illuminate\Support\Facades\Auth;
 class PreferedController extends Controller
 {
@@ -85,12 +86,15 @@ class PreferedController extends Controller
 
     /**
      * Remove the specified resource from storage.
-     *
-     * @param  int  $id
+     * 
+     * @param  \Illuminate\Http\Request  $request
+     * @
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request  $request)
     {
         //
+
+        StoreUser::where('user_id', Auth::id())->where('store_id', $request->storeID)->delete();
     }
 }

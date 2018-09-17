@@ -1,10 +1,11 @@
 <template>
     
     <div>
-        <div class="card" style="width: 18rem;" >
+        <div class="card" style="width: 18rem;" v-show="!liked">
         <img class="card-img-top" :src="store.image_link" alt="Card image cap">
         <div class="card-body">
             <h5 class="card-title">{{store.name}}</h5>
+            <p>{{store.distance}} m.</p>
             <div class="row">
                 <button type="button" class="btn btn-default" aria-label="Left Align" v-on:click="likeHandler(store.id)">
                     Like
@@ -26,8 +27,14 @@
 import axios from 'axios';
 export default {
 
-    props:['store'],
+    props:['store','refresh'],
+    data:()=>{
+        return{
 
+            liked:false
+
+        }
+    },
     methods: {
 
         likeHandler: (storeID)=>{
@@ -37,9 +44,13 @@ export default {
             })
             .then((res)=>{
                 console.log( res)
+                this.liked=true;
+                
             }).catch((err)=>{
-                console.log("Licked")
+                console.log(err)
             })
+
+            this.refresh
 
 
         }

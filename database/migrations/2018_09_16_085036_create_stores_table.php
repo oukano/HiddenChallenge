@@ -17,8 +17,7 @@ class CreateStoresTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->string('image_link');
-            $table->float('lan'); //stand fon langitude of the store
-            $table->float('lat'); //stand fon latitude of the store
+            $table->float('distance'); //stand fon langitude of the store
             $table->timestamps();
         });
     }

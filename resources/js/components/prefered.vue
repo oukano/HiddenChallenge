@@ -1,6 +1,6 @@
 <template>
     <div class="row">
-        <preferedthumbnail v-for="prefered in prefereds" :key="prefered.id" :store="prefered"/>
+        <preferedthumbnail v-for="prefered in prefereds" :key="prefered.id" :store="prefered" :refresh="refresh()"/>
     </div>
 </template>
 
@@ -18,18 +18,27 @@ export default {
 
     mounted(){
 
-        console.log("prefered");
+        this.refresh()
+        
+    },
 
-        axios.get("/prefered")
-        .then((res)=>{
+    methods:{
 
-            this.prefereds= res.data
-            console.log(this.prefereds)
-        })
-        // .catch(function (error) {
-        //     // handle error
-        //     console.log(error);
-        // })
+        refresh(){
+                console.log("prefered");
+
+            axios.get("/prefered")
+            .then((res)=>{
+
+                this.prefereds= res.data
+                console.log(this.prefereds)
+            })
+            .catch(function (error) {
+                // handle error
+                console.log(error);
+            })
+        
+        }
     }
 
     

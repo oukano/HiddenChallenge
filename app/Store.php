@@ -13,7 +13,7 @@ class Store extends Model
      * @var array
      */
     protected $fillable = [
-        'name', 'image_link', 'lan','lat'
+        'name', 'image_link', 'distance'
     ];
 
     public function likes()

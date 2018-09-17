@@ -15,8 +15,9 @@ Auth::routes();
 
 
 Route::get('/', 'HomeController@index')->name('home');
-Route::post('addLike','likeController@addLike');
+Route::post('addLike','LikeController@addLike');
+Route::post('deletePrefered','PreferedController@destroy');
 Route::resource('nearby', 'NearbyController');
 Route::resource('prefered', 'PreferedController');
-Route::get('/$anything',  'HomeController@index');
+Route::get('/{anything}',  'HomeController@index');
 
