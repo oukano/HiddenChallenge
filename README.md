@@ -1,22 +1,22 @@
 # The Hidden Challenge
 
-* web-coding-challenge *
+* web-coding-challenge 
 
 
 ## installation
 
-** 1 : $ git pull https://github.com/oukano/HiddenChallenge.git **
-** 2 : $ composer install **
-** 3 : $ npm install **
-** 3 : import DB by inserting hidden.sql file found in the repo **
-** 3 : $ php artisan migrate **
-** 3 : $ php artisan serve **
+1. $ git pull https://github.com/oukano/HiddenChallenge.git 
+2. $ composer install 
+3. $ npm install 
+4. import DB by inserting hidden.sql file found in the repo 
+5. $ php artisan migrate 
+6. $ php artisan serve 
 
 ## Techs 
 
-** 1 : Laravel 5.7 **
-** 2 : VueJs 2 **
-** 2 : Axios  **
+1. Laravel 5.7 
+2. VueJs 2 
+3. Axios  
 
 ## Functional spec
 
@@ -31,7 +31,7 @@
 
 ## Log Cridentials 
 
-* email : user@hiddenFounders.com *
+* email : user@hiddenFounders.com 
 * password : user1234 *
 
 
